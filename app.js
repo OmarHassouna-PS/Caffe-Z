@@ -1,18 +1,32 @@
-const Name = prompt("Please enter your name:");
-const Gander = prompt("Please enter your Gander male/female:");
-let Nickname = " ";
+let arrAnswer = [];
 
-    if (Gander === "male") 
-        Nickname = " Mr "; 
-    else if (Gander === "female") 
-        Nickname = " Ms ";
+let name = prompt("Please enter your name:");
+let nickname = " ";
+let gander = "";
 
-    alert("Welcome" + Nickname + Name);
+    while (gander != "male" && gander != "female") {
+        
+        gander = prompt("Please enter your Gander male/female:");
+    }    
+
+    if (gander === "male") 
+        nickname = " Mr "; 
+    else if (gander === "female") 
+        nickname = " Ms ";
+
+    alert("Welcome" + nickname + name);
     
-    const DrinkChoices = prompt("Do you want drink hot or cold drink" + Nickname + Name);
+    let drinkType = prompt("Do you want drink hot or cold drink" + nickname + name);
     
-    const DrinkName = prompt("Please enter drink name" + Nickname + Name);
+    let drinkName = prompt("Please enter drink name" + nickname + name);
     
     alert("Your request is being prepared");
-    
-    console.log("User Name : " + Name + ", Drink Name : " + DrinkName)
+
+    arrAnswer.push(name);
+    arrAnswer.push(gander);
+    arrAnswer.push(drinkType);
+    arrAnswer.push(drinkName);
+
+    for (let index = 0; index < arrAnswer.length; index++) {
+        console.log(arrAnswer[index]);
+    }

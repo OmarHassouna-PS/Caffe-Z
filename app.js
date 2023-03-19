@@ -11,7 +11,7 @@ let gander = "";
 
     if (gander === "male") 
         nickname = " Mr "; 
-    else if (gander === "female") 
+    else
         nickname = " Ms ";
 
     alert("Welcome" + nickname + name);

@@ -2,12 +2,18 @@ let arrAnswer = [];
 
 let name = prompt("Please enter your name:");
 let nickname = " ";
-let gander = "";
 
+function ganderFunction() {
+
+    let gander = "";
     while (gander != "male" && gander != "female") {
-        
-        gander = prompt("Please enter your Gander male/female:");
-    }    
+            
+            gander = prompt("Please enter your Gander male/female:");
+    }   
+    return gander;
+}
+
+let gander = ganderFunction();
 
     if (gander === "male") 
         nickname = " Mr "; 

@@ -28,6 +28,11 @@ body {
     word-spacing: 0.1rem;
 }
 
+.Hero-section > div {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+}
 /* end general */
 
 /* ************************** */

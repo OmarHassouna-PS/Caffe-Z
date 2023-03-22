@@ -27,7 +27,7 @@
                                 <a class="nav-link" href="#">ABOUT</a>
                             </li>
                             <li class="nav-item ms-md-4 ms-lg-5">
-                                <a class="nav-link" href="#">REVIEWS</a>
+                                <a class="nav-link" href="#orderings-section">Ordering</a>
                             </li>
                         </ul>
                     </div>
@@ -65,8 +65,26 @@
                     <button class="Hero-button btn btn-light">BUY NOW</button>
                 </div>
             </div>
+        </section>
 
-            <div class="general-font" id="userInf"></div>
+        <section  class="orderings-section">
+            <hr class="line-full">
+            <div id="orderings-section" class="row justify-content-center align-items-center">
+                <div class="form form-font col-12 p-5">
+                    <h3>Please Enter Your order</h3>
+                    <form id="myForm" autocomplete="off">
+                        <input required autofocus class="form-control mt-3" placeholder="Name" type="text" name="name" >
+                        <input required class="form-control mt-3" placeholder="Age" type="text" name="age" >
+                        <input required class="form-control mt-3 mb-3" placeholder="Drink Name" type="text" name="drinkType" >
+                        <input checked class="form-check-input" id="hot" type="checkbox" name="drinkMod_hot" value="hot">
+                        <label class="form-check-label me-2" for="hot">hot</label>
+                        <input class="form-check-input" id="cold" type="checkbox" name="drinkMod_cold" value="cold" >
+                        <label class="form-check-label" for="cold">cold</label>
+                        <button class="Hero-button btn btn-light d-block mt-3" type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+            <div id="container" class="form-font info"></div>
         </section>
 
     </main>
@@ -113,9 +131,3 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 </html>
-
-<!-- 
-        <button class="alert btn btn-outline-primary" onclick="AlertFunction()">Mony</button>
-    <button class="confirm btn btn-outline-primary" onclick="ConfirmFunction()">Delete Item</button>
-    <button class="prompt btn btn-outline-primary" onclick="PromptFunction()">Enter your name</button>
- -->

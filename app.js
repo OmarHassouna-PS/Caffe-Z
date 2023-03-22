@@ -1,72 +1,38 @@
-let arrAnswer = [];
+const form = document.getElementById("myForm");
+let container = document.getElementById("container");
 
-let name = prompt("Please enter your name:");
-let age = prompt("Please enter your age:");
-let nickname = " ";
+form.addEventListener("submit", (event) => {
 
-function ganderFunction() {
+    let name = event.target.name.value;
+    let age = event.target.age.value;
+    let drinkMod = event.target.drinkMod.value;
+    let drinkType = event.target.drinkType.value;
 
-    let gander = "";
-    while (gander != "male" && gander != "female") {
-            
-            gander = prompt("Please enter your Gander male/female:");
-    }   
-    return gander;
+    event.preventDefault();
+
+    render(name, age, drinkType, drinkMod);
+});
+
+function render(name, age, drinkMod, drinkType) {
+
+    let render_name = document.createElement('p');
+    let render_age = document.createElement('p');
+    let render_drinkMod = document.createElement('p');
+    let render_drinkType = document.createElement('p');
+    let hr = document.createElement('hr');
+
+    render_name.textContent = name;
+    render_age.textContent = age;
+    render_drinkMod.textContent = drinkMod;
+    render_drinkType.textContent = drinkType;
+
+    container.appendChild(render_name);
+    container.appendChild(render_age);
+    container.appendChild(render_drinkMod);
+    container.appendChild(render_drinkType);
+    container.appendChild(hr);
 }
 
-let gander = ganderFunction();
-
-    if (gander === "male") 
-        nickname = " Mr "; 
-    else
-        nickname = " Ms ";
-
-    alert("Welcome" + nickname + name);
-    
-    let drinkType = prompt("Do you want drink hot or cold drink" + nickname + name);
-    
-    let drinkName = prompt("Please enter drink name" + nickname + name);
-    
-    alert("Your request is being prepared");
-
-    arrAnswer.push(name);
-    arrAnswer.push(gander);
-    arrAnswer.push(drinkType);
-    arrAnswer.push(drinkName);
-
-    for (let index = 0; index < arrAnswer.length; index++) {
-        console.log(arrAnswer[index]);
-    }
-
-    let container = document.getElementById("userInf");
-    let div = document.createElement('div');
-    let paragraph = document.createElement('p');
-
-    paragraph.textContent = "Name : " + name;
-
-    div.appendChild(paragraph);
-
-    let ul = document.createElement('ul');
-
-    
-    let ligander = document.createElement('li');
-    let liage = document.createElement('li');
-    let lidrinkName = document.createElement('li');
-    
-    const ganderTextNode = document.createTextNode("Gander : " + gander);
-    const ageTextNode = document.createTextNode("Age : " + age);
-    const drinkNameTextNode = document.createTextNode("Drink : " + drinkType + " " + drinkName);
 
 
-    ligander.appendChild(ganderTextNode);
-    liage.appendChild(ageTextNode);
-    lidrinkName.appendChild(drinkNameTextNode);
-
-    ul.appendChild(ligander);
-    ul.appendChild(liage);
-    ul.appendChild(lidrinkName);
-    
-    div.appendChild(ul);
-
-    container.appendChild(div);
 
